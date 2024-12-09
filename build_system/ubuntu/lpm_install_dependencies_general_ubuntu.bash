@@ -84,10 +84,13 @@ sudo apt-get update &&
     make \
   sudo rm -rf /var/lib/apt/lists/*
 
+n2st::teamcity_service_msg_blockOpened "Install CMake with pip"
 pip install cmake
 print_msg "Cmake version is $(cmake --version)"
+n2st::teamcity_service_msg_blockClosed
 ##cmake --version
 
+n2st::teamcity_service_msg_blockOpened "Install development utilities2"
 # Retrieve ubuntu version number: DISTRIB_RELEASE
 source /etc/lsb-release
 print_msg "Ubuntu version is ${DISTRIB_RELEASE}"
