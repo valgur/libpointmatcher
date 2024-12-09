@@ -81,7 +81,8 @@ sudo apt-get update &&
     gcc \
     g++ \
     catch \
-    make
+    make \
+    pip
   sudo rm -rf /var/lib/apt/lists/*
 ##cmake --version
 
@@ -104,7 +105,7 @@ n2st::teamcity_service_msg_blockClosed
 # .................................................................................................
 
 n2st::teamcity_service_msg_blockOpened "Install CMake with pip"
-pip install cmake
+pip3 install cmake
 print_msg "Cmake version is $(cmake --version)"
 n2st::teamcity_service_msg_blockClosed
 # .................................................................................................
