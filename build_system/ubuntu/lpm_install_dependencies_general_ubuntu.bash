@@ -82,10 +82,10 @@ sudo apt-get update &&
     g++ \
     catch \
     make \
-    cmake \
-    cmake-gui &&
   sudo rm -rf /var/lib/apt/lists/*
 
+pip install cmake
+print_msg "Cmake version is $(cmake --version)"
 ##cmake --version
 
 # Retrieve ubuntu version number: DISTRIB_RELEASE
