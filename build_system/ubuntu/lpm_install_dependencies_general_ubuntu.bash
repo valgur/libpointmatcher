@@ -81,16 +81,10 @@ sudo apt-get update &&
     gcc \
     g++ \
     catch \
-    make \
+    make
   sudo rm -rf /var/lib/apt/lists/*
-
-n2st::teamcity_service_msg_blockOpened "Install CMake with pip"
-pip install cmake
-print_msg "Cmake version is $(cmake --version)"
-n2st::teamcity_service_msg_blockClosed
 ##cmake --version
 
-n2st::teamcity_service_msg_blockOpened "Install development utilities2"
 # Retrieve ubuntu version number: DISTRIB_RELEASE
 source /etc/lsb-release
 print_msg "Ubuntu version is ${DISTRIB_RELEASE}"
@@ -106,6 +100,12 @@ if [[ ${DISTRIB_RELEASE} == '18.04' ]]; then
   sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-9
 fi
 
+n2st::teamcity_service_msg_blockClosed
+# .................................................................................................
+
+n2st::teamcity_service_msg_blockOpened "Install CMake with pip"
+pip install cmake
+print_msg "Cmake version is $(cmake --version)"
 n2st::teamcity_service_msg_blockClosed
 # .................................................................................................
 
