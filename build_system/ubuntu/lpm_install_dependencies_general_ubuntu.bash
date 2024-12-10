@@ -105,7 +105,7 @@ n2st::teamcity_service_msg_blockClosed
 # .................................................................................................
 
 n2st::teamcity_service_msg_blockOpened "Install CMake with pip"
-pip install cmake
+python3 -m pip install cmake --verbose
 print_msg "Cmake version is $(cmake --version)"
 n2st::teamcity_service_msg_blockClosed
 # .................................................................................................
