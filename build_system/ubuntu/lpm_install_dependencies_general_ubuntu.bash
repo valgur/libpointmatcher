@@ -106,7 +106,7 @@ n2st::teamcity_service_msg_blockClosed
 
 n2st::teamcity_service_msg_blockOpened "Install CMake with pip"
 sudo apt-get update && apt-get install --assume-yes python3-pip
-PIP_BREAK_SYSTEM_PACKAGES=1 && python3 -m pip install cmake --verbose
+PIP_BREAK_SYSTEM_PACKAGES=1 python3 -m pip install cmake --verbose
 print_msg "Cmake version is $(cmake --version)"
 n2st::teamcity_service_msg_blockClosed
 # .................................................................................................
