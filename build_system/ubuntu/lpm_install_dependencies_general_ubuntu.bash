@@ -82,7 +82,7 @@ sudo apt-get update &&
     g++ \
     catch \
     make \
-    pip
+    python3-pip
   sudo rm -rf /var/lib/apt/lists/*
 ##cmake --version
 
